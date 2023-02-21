@@ -6,6 +6,10 @@ $-- %%%% TODO %%%%%
 $-- Customize is needed, like below for printing the authors. Otherwise remove this partials to use Quarto default one.
 $-- %%%%%%%%%%%%%%%%
 
+$if(joas-doi)$
+\doi{$joas-doi$}
+$endif$
+
 $if(title)$
 \title{$title$}
 $--\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}

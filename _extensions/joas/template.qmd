@@ -32,6 +32,7 @@ author:
       - name: Institution-1
         city: City-1
         country: Country-1
+joas-doi: "10.74800/joas.x.xxxx"
 joas-editor: Editor Name
 joas-reviewer:
   - First Reviewer
