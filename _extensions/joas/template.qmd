@@ -1,0 +1,171 @@
+---
+title: "Using a concise title for your article, 12 words max"
+format:
+  joas-pdf:
+    keep-tex: true
+    include-in-header: 
+      text: |
+        % just for the this demo
+        \usepackage[english]{babel}
+        \usepackage{blindtext} 
+  joas-html: default
+
+author:
+  - name: First Author
+    corresponding: true
+    email: correspndence@email.domain
+    affiliations:
+      - name: Institution-1
+        city: City-1
+        country: Country-1
+  - name: Second Author
+    affiliations:
+      - name: Institution-2
+        city: City-2
+        country: Country-2
+  - name: Third Author
+    email: correspndence2@email.domain
+    affiliations:
+      - name: Institution-3
+        city: City-3
+        country: Country-3
+      - name: Institution-1
+        city: City-1
+        country: Country-1
+joas-editor: Editor Name
+joas-reviewer:
+  - First Reviewer
+  - Second Reviewer
+  - Third Reviewer
+joas-dates:
+  received: "1 April 2022"
+  revised: "1 May 2022"
+  accepted: "10 May 2022"
+  published: "20 May 2022"
+joas-abbreviations:
+  - "JOAS: Journal of Open Aviation Science"
+  - "ATM: Air Traffic Managment"
+filters:
+  - latex-environment
+environments: [acknowledgement, credit, funding, opendata, reproduce]
+
+abstract: |
+    An abstract summarizes in one paragraph with 300 words or less, the major aspects of the entire paper. They often include: 1) the overall purpose of the study and the research problem you investigated; 2) the basic design of you research approach; 3) major findings as a result of your analysis; and, 4) a brief summary of your interpretations and conclusions. 
+# maximum five keywords
+keywords: [keyword, keyword one, keywork two]
+reference-section-title: References
+bibliography: reference.bib  
+---
+
+# Introduction {#sec-intro}
+
+\blindtext 
+Some example open open-source research data [@schafer2014bringing] and tools [@olive2019traffic]. 
+
+\blindtext[2]
+
+# Method
+
+## Method part 1
+
+\blindtext The end result is in @fig-logo.
+
+![JOAS Logo](_extensions/quarto-journals/joas/extra/joas-logo.pdf){#fig-logo width=60% fig-align="center"}
+
+\blindtext
+
+Some text with a footnote[^1].
+
+[^1]: This is how a footnote works.
+
+
+
+## Method part 2
+
+### Method part 2-1
+
+\blindtext Reference to Equation @eq-cauchy_momentum.
+
+$$
+\rho\frac{\mathrm{D} \mathbf{u}}{\mathrm{D} t} = - \nabla p + \nabla \cdot \boldsymbol \tau + \rho\,\mathbf{g}
+$$ {#eq-cauchy_momentum}
+
+
+
+
+### Method part 2-2
+
+\blindtext Table @tbl-example-table shows an example.
+
+| Parameter   | Notation  | Remarks                  |
+|:------------|:----------|:-------------------------|
+| name        | -         | engine common identifier |
+| manufacture | -         | name of the manufacture  |
+| bpr         | $\lambda$ | bypass ratio             |
+| pr          | -         | pressure ratio           |
+| thrust      | $T_0$     | maximum static thrust.   |
+
+: Demonstration of pipe table syntax {#tbl-example-table}
+
+
+\blindtext
+
+# Discussions
+
+**Paragraph title** This is the paragraph with title if you want to use such function in the paper. \blindtext
+
+
+# Conclusion
+
+\blindtext
+
+
+\appendix
+
+# Supplementary figures {.appendix}
+
+\blindtext
+
+# Supplementary tables
+
+\blindtext
+
+
+
+::: {.acknowledgement}
+Include your acknowledgement in this section.
+:::
+
+::: {.credit}
+If the paper has more than one author, the CRediT section must be included.
+See example usage on <https://casrai.org/credit/>
+
+* First Author: Conceptualization, Methodology, Software, Writing- Original draft
+* Second Author: Data curation, Writing- Original draft
+* Third Author: Visualization, Investigation
+:::
+
+
+<!-- Author contributions (CRediT) are mandatory for all papers with more than one author -->
+::: {.funding}
+When applicable, please specify the funding information for this research.
+:::
+
+<!-- Data statement is mandatory for all papers -->
+::: {.opendata}
+DOI and short description to supplementary data.
+:::
+
+<!-- reproducibility statement is mandatory for all papers -->
+::: {.reproduce}
+Information on how to reproduce this research, including access to 1) source code related the research, 2) source code for the figures, 3) source code / data for the tables when applicable.
+:::
+
+
+
+
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

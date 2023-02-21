@@ -1,0 +1,45 @@
+$-- You can use as many custom partials as you need. Convention is to prefix name with '_'
+$-- It can be useful to use such template to split some template parts in smaller pieces, which is easier to reuse.
+$-- This '_custom.tex' is used on 'title.tex' as example.
+$-- See other existing format in quarto-journals/ organisation.
+$-- %%%% TODO %%%%%
+$-- Use it if you need to insert content at this specific place of the main Pandoc's template. Otherwise, remove it.
+$-- Here we are using it to format the authors part of the template.
+$-- %%%%%%%%%%%%%%%
+
+
+$for(by-author)$
+  \author{$by-author.name.literal$}
+  $if(by-author.email)$
+    $if(by-author.attributes.corresponding)$
+    \email{$by-author.email$}
+    $endif$
+  $endif$
+  $if(by-author.affiliations)$
+    $for(by-author.affiliations)$
+      \affiliation{%
+        $if(by-author.affiliations.name)$
+          $by-author.affiliations.name$
+        $endif$
+        $if(by-author.affiliations.address)$
+          , $by-author.affiliations.address$
+        $endif$
+        $if(by-author.affiliations.city)$
+          , $by-author.affiliations.city$
+        $endif$
+        $if(by-author.affiliations.state)$
+          , $by-author.affiliations.state$
+        $endif$
+        $if(by-author.affiliations.country)$
+          , $by-author.affiliations.country$
+        $endif$
+        $if(by-author.affiliations.postal-code)$
+          , $by-author.affiliations.postal-code$
+        $endif$
+      }
+    $endfor$
+  $endif$
+$endfor$
+
+
+$--$it.name.literal$$if(it.orcid)$~\orcidlink{$it.orcid$}$endif$$for(it.affiliations/first)$\\$it.name$$endfor$\\$if(it.email)$\href{mailto:$it.email$}{$it.email$}$endif$
