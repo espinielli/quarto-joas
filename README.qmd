@@ -13,7 +13,6 @@ library(magick)
 
 # Render template
 fs::dir_copy("_extensions/joas", "_extensions/quarto-journals/joas", overwrite = TRUE)
-fs::file_copy("_extensions/joas/reference.bib", "reference.bib", overwrite = TRUE)
 fs::dir_copy("_extensions/joas/extra", "extra", overwrite = TRUE)
 quarto_render(input = "template.qmd", output_format = "joas-pdf")
 fs::dir_delete("_extensions/quarto-journals")

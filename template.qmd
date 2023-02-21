@@ -71,7 +71,7 @@ Some example open open-source research data [@schafer2014bringing] and tools [@o
 
 \blindtext The end result is in @fig-logo.
 
-![JOAS Logo](_extensions/quarto-journals/joas/extra/joas-logo.pdf){#fig-logo width=60% fig-align="center"}
+![JOAS Logo](extra/joas-logo.pdf){#fig-logo width=60% fig-align="center"}
 
 \blindtext
 
