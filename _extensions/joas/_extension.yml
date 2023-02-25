@@ -15,7 +15,6 @@ contributes:
         opts_chunk:
           echo: false
       biblio-config: false
-      csl: acm-siggraph.csl
     pdf:
       pdf-engine: pdflatex
       # define default configuration for the pdf version of your format
