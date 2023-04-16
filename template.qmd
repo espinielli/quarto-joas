@@ -13,7 +13,7 @@ format:
 author:
   - name: First Author
     corresponding: true
-    email: correspndence@email.domain
+    email: correspondence@email.domain
     affiliations:
       - name: Institution-1
         city: City-1
@@ -24,7 +24,7 @@ author:
         city: City-2
         country: Country-2
   - name: Third Author
-    email: correspndence2@email.domain
+    email: correspondence2@email.domain
     affiliations:
       - name: Institution-3
         city: City-3
@@ -56,6 +56,9 @@ abstract: |
 keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
 bibliography: reference.bib  
+csl: european-journal-of-physics.csl
+#cite-method: biblatex
+#biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
 
 # Introduction {#sec-intro}
