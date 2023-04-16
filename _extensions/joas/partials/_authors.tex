@@ -18,23 +18,45 @@ $for(by-author)$
   $if(by-author.affiliations)$
     $for(by-author.affiliations)$
       \affiliation{%
-        $if(by-author.affiliations.name)$
-          $by-author.affiliations.name$
+        $if(it.name)$
+          $it.name$
         $endif$
-        $if(by-author.affiliations.address)$
-          , $by-author.affiliations.address$
+        $if(it.address)$
+          , $it.address$
         $endif$
-        $if(by-author.affiliations.city)$
-          , $by-author.affiliations.city$
+        $if(it.city)$
+          , $it.city$
         $endif$
-        $if(by-author.affiliations.state)$
-          , $by-author.affiliations.state$
+        $if(it.state)$
+          , $it.state$
         $endif$
-        $if(by-author.affiliations.country)$
-          , $by-author.affiliations.country$
+        $if(it.country)$
+          , $it.country$
         $endif$
-        $if(by-author.affiliations.postal-code)$
-          , $by-author.affiliations.postal-code$
+        $if(it.postal-code)$
+          , $it.postal-code$
+        $endif$
+      }
+    $endfor$
+    $for(by-author.affiliations/rest)$
+      \alsoaffiliation{%
+        $if(it.name)$
+          $it.name$
+        $endif$
+        $if(it.address)$
+          , $it.address$
+        $endif$
+        $if(it.city)$
+          , $it.city$
+        $endif$
+        $if(it.state)$
+          , $it.state$
+        $endif$
+        $if(it.country)$
+          , $it.country$
+        $endif$
+        $if(it.postal-code)$
+          , $it.postal-code$
         $endif$
       }
     $endfor$
