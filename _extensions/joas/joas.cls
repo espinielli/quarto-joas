@@ -44,7 +44,7 @@
 \let\Bbbk\relax
 \RequirePackage[semibold]{sourcesanspro}
 \RequirePackage[scaled=0.95]{inconsolata}
-\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext}
+%\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext} % temp FIX, see https://github.com/open-aviation/joas-template/issues/1#issuecomment-1445481998
 
 \RequirePackage[table,svgnames]{xcolor}
 
