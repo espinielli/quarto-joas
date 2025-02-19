@@ -9,7 +9,7 @@ $-- %%%%%%%%%%%%%%%
 
 
 $for(by-author)$
-  \author{$by-author.name.literal$}
+  \author{$by-author.name.literal$ $if(by-author.orcid)$\orcid{$by-author.orcid$}$endif$}
   $if(by-author.email)$
     $if(by-author.attributes.corresponding)$
     \email{$by-author.email$}

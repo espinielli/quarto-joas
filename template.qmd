@@ -1,5 +1,5 @@
 ---
-title: "Using a concise title for your article, 12 words max"
+title: "Using a concise title for your article"
 format:
   joas-pdf:
     keep-tex: true
@@ -14,11 +14,13 @@ author:
   - name: First Author
     corresponding: true
     email: correspondence@email.domain
+    orcid: 0000-0000-0000-0000
     affiliations:
       - name: Institution-1
         city: City-1
         country: Country-1
   - name: Second Author
+    orcid: 0000-0000-0000-0000
     affiliations:
       - name: Institution-2
         city: City-2
@@ -56,15 +58,14 @@ abstract: |
 keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
 bibliography: reference.bib  
-csl: european-journal-of-physics.csl
+csl: acm-siggraph.csl
 #cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
 
 # Introduction {#sec-intro}
 
-\blindtext 
-Some example open open-source research data [@schafer2014bringing] and tools [@olive2019traffic]. 
+\blindtext open data in science [@murray2008open]. 
 
 \blindtext[2]
 
