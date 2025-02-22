@@ -25,7 +25,7 @@ contributes:
     pdf:
       pdf-engine: pdflatex
       # define default configuration for the pdf version of your format
-      documentclass: media/joas
+      documentclass: joas
       classoption:
         - "manuscript=article"
         - "layout=preprint"
@@ -51,7 +51,7 @@ contributes:
         - "partials/before-body.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
-        - media
+        - joas.cls
         - references.bib
     html:
       # define default configuration for the html version of your format

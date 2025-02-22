@@ -56,7 +56,7 @@ keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
 bibliography: references.bib  
 csl: media/acm-siggraph.csl
-#cite-method: biblatex
+# cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
 

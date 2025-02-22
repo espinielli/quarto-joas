@@ -14,6 +14,7 @@ library(magick)
 # Render template
 fs::dir_copy("_extensions/joas", "_extensions/espinielli/joas", overwrite = TRUE)
 fs::dir_copy("_extensions/joas/media", "media",overwrite = TRUE)
+fs::file_copy("_extensions/joas/media/joas.cls", "joas.cls",overwrite = TRUE)
 fs::file_copy("_extensions/joas/references.bib", "references.bib",overwrite = TRUE)
 quarto_render(input = "template.qmd", output_format = "joas-pdf")
 fs::dir_delete("_extensions/espinielli")
