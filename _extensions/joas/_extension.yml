@@ -52,6 +52,7 @@ contributes:
       format-resources:
         # Add here the resources required for the PDF rendering
         - joas.cls
+        - acm-siggraph.csl
         - references.bib
     html:
       # define default configuration for the html version of your format
