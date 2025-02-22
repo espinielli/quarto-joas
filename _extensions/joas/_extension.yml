@@ -8,6 +8,13 @@ contributes:
       filters:
         # You can include here Lua filters from your extension format
         - color-text.lua
+        - latex-environment
+      environments:
+        - acknowledgement
+        - credit
+        - funding
+        - opendata
+        - reproduce
       shortcodes:
         # You can include here Lua filters defining shortcodes from your extension
         - shortcodes.lua
@@ -18,7 +25,7 @@ contributes:
     pdf:
       pdf-engine: pdflatex
       # define default configuration for the pdf version of your format
-      documentclass: joas
+      documentclass: media/joas
       classoption:
         - "manuscript=article"
         - "layout=preprint"
@@ -26,7 +33,7 @@ contributes:
         - "year=2023"
       number-sections: true
       colorlinks: true
-      urlcolor: red
+      # urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
       # This format use a bst file with natbib
@@ -44,10 +51,8 @@ contributes:
         - "partials/before-body.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
-        - joas.cls
-        - extra/joas-logo.pdf
-        - acm-siggraph.csl
-        - reference.bib
+        - media
+        - references.bib
     html:
       # define default configuration for the html version of your format
       number-sections: true

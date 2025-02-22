@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html$if(lang)$ lang="$lang$"$endif$$if(dir)$ dir="$dir$"$endif$>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="JOAS">
+
+  $if(keywords)$
+    <meta name="keywords" content="$for(keywords)$$keywords$$sep$, $endfor$">
+  $endif$
+
+  <title>JOAS</title>
+
+  $if(math)$
+    $math$
+  $endif$
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet"> 
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"
+    integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous">
+  </script>
+
+  <script crossorigin="anonymous" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto Slab', serif !important;
+      padding-top: 20px;
+    }
+
+    header {
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    footer {
+      padding: 15px;
+      margin-top: 20px;
+      border-top: 1px dashed #ccc;
+    }
+
+    .title {font-size: 2em}
+    .abstract p {margin:0}
+
+    nav ul {padding-left: 20px; font-size: 90%}
+
+    pre {
+      background: #f5f5f5;
+      padding: 10px;
+      line-height: 1.15 !important;
+      font-size: 80% !important;
+    }
+
+    code {
+      background: #f5f5f5;
+      color: #000;
+      padding: 0 3px;
+    }
+
+    pre {text-align:left !important}
+    pre > code{padding: 0 !important}
+
+    .paper h1 {
+      font-size: 2em;
+      margin-top: 0.2em;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 5px;
+    }
+
+    .paper h2{
+      font-size: 1.7em;
+      margin-top: 1em;
+    }
+
+    .paper h3 {
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+
+    .paper {counter-reset: h1counter}
+    .paper h1 {counter-reset: h2counter}
+    .paper h2 {counter-reset: h3counter}
+
+    .paper h1:before {
+      content: counter(h1counter) ".\0000a0\0000a0";
+      counter-increment: h1counter;
+    }
+    .paper h2:before {
+      content: counter(h1counter) "." counter(h2counter) ".\0000a0\0000a0";
+      counter-increment: h2counter;
+    }
+    .paper h3:before {
+      content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+      counter-increment: h3counter;
+    }
+
+    .paper figure img{
+      width: auto;
+      max-width: 400px;
+    }
+
+
+    table {
+      margin: 20px auto;
+      border: 1px solid #aaa;
+      font-size: 90%;
+      min-width: 70%;
+    }
+
+    table thead {background: #f3f3f3}
+    table caption {text-align: center}
+    table th, table td {padding: 3px 6px}
+    table th {border-bottom: 2px solid #aaa}
+
+    table tr.even {background: #fbfbfb}
+    table tr:hover{background: #eee}
+
+    figure > img, p > img {margin: 10px auto}
+    figure {margin: 20px 0; text-align: center}
+    figcaption {margin: 10px 0;color: #6c757d}
+
+    li > p {margin-bottom: 3px}
+
+    .citation {
+      background-color: #eee;
+      font-size: 0.9em;
+    }
+
+    .references::before{
+      content: "References:";
+      display: block;
+      height: 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+    }
+
+    .references .csl-entry {
+      font-size: 80%;
+      margin-bottom: 10px;
+      padding-left: 5px;
+      border-left: 3px solid #eee;
+    }
+
+    .references .csl-entry:hover {background: #eee}
+
+  </style>
+
+</head>
+
+<body>
+$for(include-before)$
+$include-before$
+$endfor$
+
+<div class="container">
+  <header class="d-flex flex-row align-items-end">
+    <div>
+      <h1 class="title mb-1">
+        $title$
+      </h1>
+      <div class="subtitle mb-1">
+        $author$
+      </div>
+    </div>
+  </header>
+
+  <div class="mb-3 p-3 bg-warning">
+    This web version is auto-generated from the LaTeX source and may not include some elements.
+    Check the PDF version for more details.
+  </div>
+
+  <div class="row">
+    <div class="col col-lg-3">
+      $if(toc)$
+      <nav id="$idprefix$TOC">
+        <h4>Sections</h4>
+        $toc$
+      </nav>
+      $endif$
+    </div>
+
+    <div class="col col-lg-9 paper">
+      <h4>Abstract</h4>
+      <div class="abstract mb-3 p-3 bg-light">
+        $abstract$
+      </div>
+      $body$
+    </div>
+  </div>
+  
+  <footer class="mastfoot">
+    <div class="text-right">
+      <p>Journal of Open Aviation Science - TU Delft OPEN Publishing</p>
+    </div>
+  </footer>
+</div>
+
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    jQuery(function () {
+        jQuery("figure>img").each(function () {
+            jQuery(this).on("click", function () {
+                jQuery("#modalImage").attr("src", this.src);
+                jQuery("#myModal").modal("show");
+            });
+        });
+    });
+</script>
+
+
+</body>
+</html>

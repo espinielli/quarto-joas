@@ -9,7 +9,7 @@
 %% ----------------------------------------------------------------------
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{joas}
+\ProvidesClass{extra/joas}
 [2021/05/04 v1.0 Submission to JOAS]
 \LoadClass[10pt,a4paper,twoside]{article}
 % Style the sectioning elements:
@@ -41,17 +41,18 @@
 %\RequirePackage[T1]{fontenc}
 \RequirePackage[tt=false, type1=true]{libertine}
 \RequirePackage[libertine]{newtxmath}
-\let\Bbbk\relax
 \RequirePackage[semibold]{sourcesanspro}
 \RequirePackage[scaled=0.95]{inconsolata}
+%\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext}
 
 \RequirePackage[table,svgnames]{xcolor}
 
 \RequirePackage{lastpage} % For getting the last page in the first page header
+
 \RequirePackage{enumitem} % For list styling
-\setlist{noitemsep,leftmargin=\parindent}
 % \setlist{noitemsep,leftmargin=\parindent}
 \setlist{noitemsep,leftmargin=*}
+
 \RequirePackage[online]{threeparttable} % For table notes
 \let\TPTnoteSettingsOrig\TPTnoteSettings
 \def\TPTnoteSettings{\TPTnoteSettingsOrig\scriptsize}
@@ -522,7 +523,7 @@
 }
 \pagestyle{plain}
 \newcommand*\cup@copyright@notice{\scriptsize%
-  \textcopyright\ TU Delft Open Publishing \cup@year.
+  \textcopyright\ \cup@year~by the authors.
   This is an Open Access article, distributed under the terms of the
   Creative Commons Attribution 4.0 International (CC BY 4.0) licence (\url{https://creativecommons.org/licenses/by/4.0/})
 }
@@ -561,16 +562,16 @@
 }
 %% Reciprocal of the height of the svg whose source is above.  The
 %% original generates a 256pt high graphic; this macro holds 1/256.
-\newcommand{\@myOrigHeightRecip}{0.00390625}
+\newcommand{\@OrigHeightRecip}{0.00390625}
 %% We will compute the current X height to make the logo the right height
-\newlength{\@mycurXheight}
+\newlength{\@curXheight}
 
 \DeclareRobustCommand\orcidlink[1]{%
   \texorpdfstring{%
-    \setlength{\@mycurXheight}{\fontcharht\font`X}%
+    \setlength{\@curXheight}{\fontcharht\font`X}%
     \href{https://orcid.org/#1}{\XeTeXLinkBox{\mbox{%
-          \begin{tikzpicture}[yscale=-\@myOrigHeightRecip*\@mycurXheight,
-              xscale=\@myOrigHeightRecip*\@mycurXheight,transform shape]
+          \begin{tikzpicture}[yscale=-\@OrigHeightRecip*\@curXheight,
+              xscale=\@OrigHeightRecip*\@curXheight,transform shape]
             \pic{orcidlogo};
           \end{tikzpicture}%
         }}}}{}}

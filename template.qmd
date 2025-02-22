@@ -48,17 +48,14 @@ joas-dates:
 joas-abbreviations:
   - "JOAS: Journal of Open Aviation Science"
   - "ATM: Air Traffic Managment"
-filters:
-  - latex-environment
-environments: [acknowledgement, credit, funding, opendata, reproduce]
 
 abstract: |
     An abstract summarizes in one paragraph with 300 words or less, the major aspects of the entire paper. They often include: 1) the overall purpose of the study and the research problem you investigated; 2) the basic design of you research approach; 3) major findings as a result of your analysis; and, 4) a brief summary of your interpretations and conclusions. 
 # maximum five keywords
 keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
-bibliography: reference.bib  
-csl: acm-siggraph.csl
+bibliography: references.bib  
+csl: media/acm-siggraph.csl
 #cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
