@@ -52,39 +52,80 @@ quarto install extension espinielli/quarto-joas
   - `manuscript=poster`
 - `layout=`
   - `preprint` for submission
-  - `publish` for publisher only
-- `volume=` used by publisher
-- `year=` used by publisher
+  - `publish` for publisher only. This prepared the paper for
+    publication with all the *blees & whistles* required. See also
+    <a href="#sec-publisher-options" class="quarto-xref">Section 2.2</a>
+    and <a href="#fig-metadata" class="quarto-xref">Figure 1 (a)</a>.
+- `volume=` used by publisher, see
+  <a href="#fig-metadata" class="quarto-xref">Figure 1 (a)</a>.
+- `year=` used by publisher, see
+  <a href="#fig-metadata" class="quarto-xref">Figure 1 (a)</a>.
+
+For example the following YML snippet (and the ones in
+<a href="#sec-publisher-options" class="quarto-xref">Section 2.2</a>)
 
 ``` yml
 format:
   joas-pdf:
     classoption:
-      - "manuscript=article"
-      - "layout=preprint"
-      - "volume=1"
-      - "year=2023"
+      - "manuscript=proceedings"
+      - "layout=publish"
+      - "volume=x"
+      - "year=20xx"
 ```
+
+will render metadata as per
+<a href="#fig-metadata" class="quarto-xref">Figure 1 (a)</a>. The
+published paper will as well mention the open license JOAS promotes, see
+<a href="#fig-license" class="quarto-xref">Figure 1 (b)</a>.
+
+<div id="fig-published">
+
+<div id="fig-metadata">
+
+<img src="examples/final-metadata-joas.png"
+data-ref-parent="fig-published" />
+
+(a) publishing touches
+
+</div>
+
+<div id="fig-license">
+
+<img src="examples/license-joas.png" data-ref-parent="fig-published" />
+
+(b) License at the bottom of the title page.
+
+</div>
+
+Figure 1: Final touches for publication.
+
+</div>
 
 ## Publisher options
 
+- `layout=publish`, see
+  <a href="#sec-doc-class" class="quarto-xref">Section 2.1</a>
 - `joas-doi`: the DOI of the paper
 - `joas-editor`: the name of the editor
 - `joas-reviewer`: the list of reviewers
 - `joas-dates`: the review dates
 
+The following settings will render as per
+<a href="#fig-published" class="quarto-xref">Figure 1</a>.
+
 ``` yml
-joas-doi: "10.74800/joas.x.xxxx"
+joas-doi: "xx.xxxxx/joas.x.xxxx"
 joas-editor: Editor Name
 joas-reviewer:
   - First Reviewer
   - Second Reviewer
   - Third Reviewer
 joas-dates:
-  received: "1 April 2022"
-  revised: "1 May 2022"
-  accepted: "10 May 2022"
-  published: "20 May 2022"
+  received: "1 April 2024"
+  revised: "1 May 2024"
+  accepted: "10 May 2024"
+  published: "20 May 2024"
 ```
 
 ## Other options
@@ -93,4 +134,26 @@ joas-dates:
 joas-abbreviations:
   - "JOAS: Journal of Open Aviation Science"
   - "ATM: Air Traffic Managment"
+```
+
+# Deficiencies
+
+1.  On macOS I do not get the same font as per orignal JOAS. I think it
+    is due to some other packages or options selected there.
+2.  The plain `joas.cls` needs to be edited: the line \> does not work,
+    `eulergreek` needs to be removed.
+
+# How to upgrade to a new `joas.cls`
+
+Other than what mentioned above about `eulergreek`, I changed the
+original class to read
+
+``` tex
+\ProvidesClass{joas}
+```
+
+instead of
+
+``` tex
+\ProvidesClass{extra/joas}
 ```

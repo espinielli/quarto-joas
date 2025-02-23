@@ -5,8 +5,8 @@ format:
     classoption:
       - "manuscript=article"
       - "layout=preprint"
-      - "volume=5"
-      - "year=2025"
+      - "volume=x"
+      - "year=20xx"
     keep-tex: true
     include-in-header: 
       text: |
@@ -46,10 +46,10 @@ joas-reviewer:
   - Second Reviewer
   - Third Reviewer
 joas-dates:
-  received: "1 April 2022"
-  revised: "1 May 2022"
-  accepted: "10 May 2022"
-  published: "20 May 2022"
+  received: "1 April 2024"
+  revised: "1 May 2024"
+  accepted: "10 May 2024"
+  published: "20 May 2024"
 # conference to be specified for proceeding manuscript
 joas-conference: "Sixth OpenSky Network Symposium"
 joas-abbreviations:
