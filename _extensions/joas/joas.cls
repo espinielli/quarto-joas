@@ -44,7 +44,7 @@
 \let\Bbbk\relax
 \RequirePackage[semibold]{sourcesanspro}
 \RequirePackage[scaled=0.95]{inconsolata}
-%\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext}
+\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext}
 
 \RequirePackage[table,svgnames]{xcolor}
 

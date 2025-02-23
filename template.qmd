@@ -55,16 +55,19 @@ abstract: |
 keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
 bibliography: references.bib  
-csl: media/acm-siggraph.csl
+csl: acm-siggraph.csl
 # cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
 
 # Introduction {#sec-intro}
 
-\blindtext open data in science [@murray2008open]. 
+\blindtext
+open data in science \cite{murray2008open}.
 
-\blindtext[2]
+
+\blindtext [2]
+
 
 # Method
 
