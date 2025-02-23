@@ -34,6 +34,7 @@ contributes:
         - "year=2023"
       number-sections: true
       colorlinks: true
+      csl: extra/acm-siggraph.csl
       # urlcolor: red
       fig-width: 6.5
       fig-height: 4.5
@@ -61,4 +62,4 @@ contributes:
       toc: true
       theme: custom.scss
       # Use a CSL file to style (https://www.zotero.org/styles/)
-      csl: https://www.zotero.org/styles/journal-of-institutional-and-theoretical-economics
+      csl: extra/acm-siggraph.csl

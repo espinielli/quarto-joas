@@ -55,7 +55,6 @@ abstract: |
 keywords: [keyword, keyword one, keywork two]
 reference-section-title: References
 bibliography: references.bib  
-csl: acm-siggraph.csl
 # cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
