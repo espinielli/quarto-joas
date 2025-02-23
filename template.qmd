@@ -2,6 +2,11 @@
 title: "Using a concise title for your article"
 format:
   joas-pdf:
+    classoption:
+      - "manuscript=article"
+      - "layout=preprint"
+      - "volume=5"
+      - "year=2025"
     keep-tex: true
     include-in-header: 
       text: |
@@ -45,6 +50,8 @@ joas-dates:
   revised: "1 May 2022"
   accepted: "10 May 2022"
   published: "20 May 2022"
+# conference to be specified for proceeding manuscript
+joas-conference: "Sixth OpenSky Network Symposium"
 joas-abbreviations:
   - "JOAS: Journal of Open Aviation Science"
   - "ATM: Air Traffic Managment"
@@ -58,26 +65,30 @@ bibliography: references.bib
 # cite-method: biblatex
 #biblatexoptions: "style=numeric,maxbibnames=10,sorting=none"
 ---
+```{r}
+#| echo: false
+library("lorem")
+```
 
 # Introduction {#sec-intro}
 
-\blindtext
-open data in science [@murray2008open].
+`r lorem::ipsum(paragraphs = 2, sentences = c(3, 2))`
+Open data in science [@murray2008open].
 
+`r lorem::ipsum(paragraphs = 1, sentences = c(2))`
 
-\blindtext [2]
 
 
 # Method
 
 ## Method part 1
 
-\blindtext The end result is in @fig-logo.
+`r lorem::ipsum(paragraphs = 2, sentences = c(1, 2))`
+The end result is in @fig-logo.
 
 ![JOAS Logo](extra/joas-logo.pdf){#fig-logo width=60% fig-align="center"}
 
-\blindtext
-
+`r lorem::ipsum(paragraphs = 1)`
 Some text with a footnote[^1].
 
 [^1]: This is how a footnote works.
@@ -88,7 +99,8 @@ Some text with a footnote[^1].
 
 ### Method part 2-1
 
-\blindtext Reference to Equation @eq-cauchy_momentum.
+`r lorem::ipsum(paragraphs = 2, sentences = c(2, 1))`
+Reference to Equation @eq-cauchy_momentum.
 
 $$
 \rho\frac{\mathrm{D} \mathbf{u}}{\mathrm{D} t} = - \nabla p + \nabla \cdot \boldsymbol \tau + \rho\,\mathbf{g}
@@ -112,16 +124,18 @@ $$ {#eq-cauchy_momentum}
 : Demonstration of pipe table syntax {#tbl-example-table}
 
 
-\blindtext
+`r lorem::ipsum(paragraphs = 2, sentences = c(1, 2))`
 
 # Discussions
 
-**Paragraph title** This is the paragraph with title if you want to use such function in the paper. \blindtext
+**Paragraph title** This is the paragraph with title if you want to use such function in the paper. `r lorem::ipsum(paragraphs = 2, sentences = c(7, 7))`
+
 
 
 # Conclusion
 
-\blindtext
+`r lorem::ipsum(paragraphs = 4, sentences = c(4, 7, 3, 4))`
+
 
 
 \appendix

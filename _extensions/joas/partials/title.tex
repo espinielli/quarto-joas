@@ -10,6 +10,12 @@ $if(joas-doi)$
 \doi{$joas-doi$}
 $endif$
 
+$if(joas-conference)$
+% \conference{} command is only used for proceedings
+\conference{$joas-conference$}
+$endif$
+
+
 $if(title)$
 \title{$title$}
 $--\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
