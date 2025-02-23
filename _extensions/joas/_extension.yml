@@ -9,6 +9,7 @@ contributes:
         # You can include here Lua filters from your extension format
         - color-text.lua
         - latex-environment
+      appendix-style: plain
       environments:
         - acknowledgement
         - credit

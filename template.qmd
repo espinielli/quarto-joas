@@ -63,7 +63,7 @@ csl: acm-siggraph.csl
 # Introduction {#sec-intro}
 
 \blindtext
-open data in science \cite{murray2008open}.
+open data in science [@murray2008open].
 
 
 \blindtext [2]
@@ -125,7 +125,6 @@ $$ {#eq-cauchy_momentum}
 \blindtext
 
 
-\appendix
 
 # Supplementary figures {.appendix}
 
