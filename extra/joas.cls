@@ -41,7 +41,7 @@
 %\RequirePackage[T1]{fontenc}
 \RequirePackage[tt=false, type1=true]{libertine}
 \RequirePackage[libertine]{newtxmath}
-\let\Bbbk\relax
+\let\Bbbk\relax %% NOTE: added by espinielli to make it work w/ Quarto
 \RequirePackage[semibold]{sourcesanspro}
 \RequirePackage[scaled=0.95]{inconsolata}
 %\RequirePackage[italic,eulergreek,defaultmathsizes]{mathastext}
