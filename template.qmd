@@ -124,22 +124,23 @@ $$ {#eq-cauchy_momentum}
 \blindtext
 
 
+\appendix
 
 # Supplementary figures {.appendix}
 
 \blindtext
 
-# Supplementary tables
+# Supplementary tables {.appendix}
 
 \blindtext
 
 
 
-::: {.acknowledgement}
+::: {.acknowledgement .appendix}
 Include your acknowledgement in this section.
 :::
 
-::: {.credit}
+::: {.credit .appendix}
 If the paper has more than one author, the CRediT section must be included.
 See example usage on <https://casrai.org/credit/>
 
@@ -150,17 +151,17 @@ See example usage on <https://casrai.org/credit/>
 
 
 <!-- Author contributions (CRediT) are mandatory for all papers with more than one author -->
-::: {.funding}
+::: {.funding .appendix}
 When applicable, please specify the funding information for this research.
 :::
 
 <!-- Data statement is mandatory for all papers -->
-::: {.opendata}
+::: {.opendata .appendix}
 DOI and short description to supplementary data.
 :::
 
 <!-- reproducibility statement is mandatory for all papers -->
-::: {.reproduce}
+::: {.reproduce .appendix}
 Information on how to reproduce this research, including access to 1) source code related the research, 2) source code for the figures, 3) source code / data for the tables when applicable.
 :::
 
