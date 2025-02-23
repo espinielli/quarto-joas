@@ -1,6 +1,6 @@
 title: JOAS Format Template
 author: Enrico Spinielli
-version: 0.1.3
+version: 0.1.4
 contributes:
   formats:
     common:
@@ -30,8 +30,8 @@ contributes:
       classoption:
         - "manuscript=article"
         - "layout=preprint"
-        - "volume=1"
-        - "year=2023"
+        - "volume=x"
+        - "year=20xx"
       number-sections: true
       colorlinks: true
       csl: extra/european-journal-of-physics.csl
@@ -53,8 +53,6 @@ contributes:
         - "partials/before-body.tex"
       format-resources:
         # Add here the resources required for the PDF rendering
-        - "extra/joas.cls"
-        - "acm-siggraph.csl"
         - "references.bib"
     html:
       # define default configuration for the html version of your format
