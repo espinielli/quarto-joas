@@ -1,6 +1,6 @@
 title: JOAS Format Template
 author: Enrico Spinielli
-version: 0.1.7
+version: 0.1.8
 contributes:
   formats:
     common:
