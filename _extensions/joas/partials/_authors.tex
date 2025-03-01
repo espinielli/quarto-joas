@@ -9,7 +9,7 @@ $-- %%%%%%%%%%%%%%%
 
 
 $for(by-author)$
-  \author{$by-author.name.literal$ $if(by-author.orcid)$\orcid{$by-author.orcid$}$endif$}
+  \author{$by-author.name.literal$$if(by-author.orcid)$ \orcid{$by-author.orcid$}$endif$}
   $if(by-author.email)$
     $if(by-author.attributes.corresponding)$
     \email{$by-author.email$}
@@ -18,46 +18,12 @@ $for(by-author)$
   $if(by-author.affiliations)$
     $for(by-author.affiliations)$
       \affiliation{%
-        $if(it.name)$
-          $it.name$
-        $endif$
-        $if(it.address)$
-          , $it.address$
-        $endif$
-        $if(it.city)$
-          , $it.city$
-        $endif$
-        $if(it.state)$
-          , $it.state$
-        $endif$
-        $if(it.country)$
-          , $it.country$
-        $endif$
-        $if(it.postal-code)$
-          , $it.postal-code$
-        $endif$
+        $if(it.name)$$it.name$$endif$$if(it.address)$, $it.address$$endif$$if(it.city)$, $it.city$$endif$$if(it.state)$, $it.state$$endif$$if(it.country)$, $it.country$$endif$$if(it.postal-code)$, $it.postal-code$$endif$
       }
     $endfor$
     $for(by-author.affiliations/rest)$
       \alsoaffiliation{%
-        $if(it.name)$
-          $it.name$
-        $endif$
-        $if(it.address)$
-          , $it.address$
-        $endif$
-        $if(it.city)$
-          , $it.city$
-        $endif$
-        $if(it.state)$
-          , $it.state$
-        $endif$
-        $if(it.country)$
-          , $it.country$
-        $endif$
-        $if(it.postal-code)$
-          , $it.postal-code$
-        $endif$
+        $if(it.name)$$it.name$$endif$$if(it.address)$, $it.address$$endif$$if(it.city)$, $it.city$$endif$$if(it.state)$, $it.state$$endif$$if(it.country)$, $it.country$$endif$$if(it.postal-code)$, $it.postal-code$$endif$
       }
     $endfor$
   $endif$
