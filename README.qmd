@@ -30,7 +30,7 @@ This Quarto format will help you create articles for the Journal of Open Aviatio
 
 ## Creating a new article
 
-You can use this as a template to create an article.
+You can use this as a template to create an article from scratch.
 To do this, use the following command:
 
 ```bash
@@ -39,6 +39,12 @@ quarto use template espinielli/quarto-joas
 ```
 
 This will install the extension and create an example qmd file that you can use as a starting place for your article.
+
+If you just want to install the extension, execute:
+
+```bash
+quarto add espinielli/quarto-joas
+```
 
 **NOTE**: please soon after the creation of your article remember to render the qmd twice for the first time.
 This will copy the needed files.
